@@ -6,7 +6,7 @@ to get it up and run just clone it and enhoy coding sdsd:
 
      git clone https://github.com/gearspoint/Laravel-Vue3-Router-Axios-Bootstrap.git
 
-     cd Laravel-Vue3-Router-Axios-Bootstrap.git
+     cd Laravel-Vue3-Router-Axios-Bootstrap
 
 
 
