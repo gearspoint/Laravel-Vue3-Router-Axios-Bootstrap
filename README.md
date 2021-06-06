@@ -1,12 +1,12 @@
-# Laravel-vue-3-starter
+# Laravel8-Vue3-Router4-Axios-Bootstrap5.0.0
 
-It's a pre-configured project using Laravel 8 and Vue 3
+It's a pre-configured project using Laravel 8, Vue 3, Vue-router@4,Axios and Bootstrap@5.0.0
 
 to get it up and run just clone it and enhoy coding :
 
-     git clone https://github.com/boussadjra/laravel-vue-3-starter.git
+     git clone https://github.com/gearspoint/Laravel-Vue3-Router-Axios-Bootstrap.git
 
-     cd laravel-vue-3-starter
+     cd Laravel-Vue3-Router-Axios-Bootstrap.git
 
 
 
