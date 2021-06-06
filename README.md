@@ -14,6 +14,7 @@ to get it up and run just clone it and enhoy coding :
 then install backend modules by running 
 
      composer install
+     php artisan key:generate
 
 and front-end modules :
 
