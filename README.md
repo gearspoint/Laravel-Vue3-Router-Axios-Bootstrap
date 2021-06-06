@@ -2,7 +2,7 @@
 
 It's a pre-configured project using Laravel 8, Vue 3, Vue-router@4,Axios and Bootstrap@5.0.0
 
-to get it up and run just clone it and enhoy coding :
+to get it up and run just clone it and enhoy coding sdsd:
 
      git clone https://github.com/gearspoint/Laravel-Vue3-Router-Axios-Bootstrap.git
 
