@@ -19,6 +19,6 @@ and front-end modules :
 
      npm install
      npm run watch
-php artisan serve
+    php artisan serve
 
 finally add your magic.  
