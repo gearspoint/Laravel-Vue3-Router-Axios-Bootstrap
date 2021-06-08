@@ -1,4 +1,3 @@
-# Laravel-Vue3-Router-Axios-Bootstrap
 # Laravel8-Vue3-Router4-Axios-Bootstrap5.0.0 By Gearspoint.com
 
 It's a pre-configured project using Laravel 8, Vue 3, Vue-router@4,Axios and Bootstrap@5.0.0
