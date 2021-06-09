@@ -1,7 +1,14 @@
 <template>
   <div class="hello">
     <h1>{{ msg }}</h1>
+    <button v-on:click="myaxios()">Button myaxios</button>
+<ul id="v-for-object" class="demo">
 
+<li v-for="value in myObject" :key="value.id">
+<h3>{{ value.id }}</h3>-{{ value.name }}
+<!-- -{{ value.email }}-{{ value.created_at }}-{{ value.updated_at }} -->
+</li>
+</ul>
   </div>
 </template>
 
@@ -15,15 +22,19 @@ export default {
   props: {
     msg: String
   },
-  test () {
-      axios.get('')
-      .then(function (response) {
-        alert (response.data);
-      })
-      .catch(function (error) {
-        alert(error);
-      });
+  data() {
+return {
+myObject: {
+
+}
+}
+},methods: {
+  myaxios () {
+      axios.get('http://127.0.0.1:8000/api/list')
+      .then((response) => this.myObject =  response.data)
+      .catch((error) => console.log(error));
     }
+}
 }
 </script>
 
