@@ -5,7 +5,7 @@
 <ul id="v-for-object" class="demo">
 
 <li v-for="value in myObject" :key="value.id">
-<h3>{{ value.id }}</h3>-{{ value.name }}
+<h3>{{ value.id }}</h3>-{{ value.title }}
 <!-- -{{ value.email }}-{{ value.created_at }}-{{ value.updated_at }} -->
 </li>
 </ul>
@@ -30,7 +30,8 @@ myObject: {
 }
 },methods: {
   myaxios () {
-      axios.get('http://127.0.0.1:8000/api/list')
+          //   axios.get('http://127.0.0.1:8000/api/list')
+    axios.get('https://jsonplaceholder.typicode.com/todos')
       .then((response) => this.myObject =  response.data)
       .catch((error) => console.log(error));
     }
