@@ -25,7 +25,7 @@ At last run this command:
 
 finally add your magic.  
 
-Extra for contact with use:
+Extra for contact with us:
 
      echo "# Laravel-Vue3-Router-Axios-Bootstrap" >> README.md
      git init
