@@ -26,6 +26,7 @@ At last run this command:
 finally add your magic.  
 
 Extra for contact with use:
+
      echo "# Laravel-Vue3-Router-Axios-Bootstrap" >> README.md
      git init
      git add README.md
@@ -34,6 +35,7 @@ Extra for contact with use:
      git remote add origin https://github.com/gearspoint/Laravel-Vue3-Router-Axios-Bootstrap.git
      git push -u origin main
 And also this one:
+
      git remote add origin https://github.com/gearspoint/Laravel-Vue3-Router-Axios-Bootstrap.git
      git branch -M main
      git push -u origin main
