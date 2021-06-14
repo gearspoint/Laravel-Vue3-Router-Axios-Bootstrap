@@ -39,3 +39,11 @@ And also this one:
      git remote add origin https://github.com/gearspoint/Laravel-Vue3-Router-Axios-Bootstrap.git
      git branch -M main
      git push -u origin main
+And Also note that in .env file database and its username&password is here:
+
+     DB_CONNECTION=mysql
+     DB_HOST=127.0.0.1
+     DB_PORT=3306
+     DB_DATABASE=laravel
+     DB_USERNAME=root
+     DB_PASSWORD=
