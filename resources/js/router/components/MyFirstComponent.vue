@@ -26,8 +26,6 @@ Launch demo modal
 </template>
 
 <script>
-import 'popper.js'
-import 'jquery'
 export default {
   name: 'MyFirstComponent',
 
