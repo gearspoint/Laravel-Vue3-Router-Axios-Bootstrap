@@ -9,7 +9,7 @@ use App\Models\shark;
 class sharkController extends Controller
 {
     function list(){
-        return  shark::all();
+        return  shark::paginate(2);
                }
 
 function add(Request $req)

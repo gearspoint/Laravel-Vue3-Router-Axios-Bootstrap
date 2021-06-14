@@ -8,5 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class shark extends Model
 {
     use HasFactory;
-    public $timestamp = false;
+    public $timestamp = true;
 }

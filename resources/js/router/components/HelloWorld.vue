@@ -2,11 +2,10 @@
   <div class="hello">
     <h1>{{ msg }}</h1>
     <button v-on:click="myaxios()">Button myaxios</button>
+    <span v-for="n in 10" :key="n">{{ n }} </span>
 <ul id="v-for-object" class="demo">
-
-<li v-for="value in myObject" :key="value.id">
-<h3>{{ value.id }}</h3>-{{ value.title }}
-<!-- -{{ value.email }}-{{ value.created_at }}-{{ value.updated_at }} -->
+<li v-for="value in myObject.data" :key="value.id">
+    {{ value.id }}-{{ value.email }}-{{ value.created_at }}-{{ value.updated_at }}
 </li>
 </ul>
   </div>
@@ -26,13 +25,12 @@ export default {
 return {
 myObject: {
 
-}
+},
 }
 },methods: {
   myaxios () {
-          //   axios.get('http://127.0.0.1:8000/api/list')
-    axios.get('https://jsonplaceholder.typicode.com/todos')
-      .then((response) => this.myObject =  response.data)
+      axios.get('http://127.0.0.1:8000/api/list')
+        .then((response) => this.myObject =  response.data)
       .catch((error) => console.log(error));
     }
 }
