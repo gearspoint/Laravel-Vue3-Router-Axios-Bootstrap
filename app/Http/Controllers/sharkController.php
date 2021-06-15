@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Http\Requests\sharksrequest;
 use Illuminate\Http\Request;
 use App\Models\shark;
 
@@ -9,19 +9,20 @@ use App\Models\shark;
 class sharkController extends Controller
 {
     function list(){
-        return  shark::paginate(2);
+        // return  shark::orderby('created_at', 'desc')->paginate(2);
+        return  shark::paginate(5);
                }
 
-function add(Request $req)
+function add(sharksrequest $request)
     {
-        // return ["Data"=>"Data has been saved"];
         $shark = new shark;
-        $shark->name = $req->name;
-        $shark->email = $req->email;
-        $shark->shark_level = $req->shark_level;
-        $result = $shark->save();
-        If($result){
-            return ["Data"=>"Data has been saved"];
+        $shark->name = $request->name;
+        $shark->email = $request->email;
+        $shark->shark_level = $request->shark_level;
+        $shark = $shark->save();
+        // $shark = shark::create($request->all());
+        If($shark){
+            return  shark::orderby('created_at', 'desc')->paginate(5);;
                     }
                     else {
                             return ["Data"=>"Data has not been saved"];

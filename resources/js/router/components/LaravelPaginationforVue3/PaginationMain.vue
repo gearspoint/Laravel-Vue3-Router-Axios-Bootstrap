@@ -18,13 +18,21 @@
       </tr>
     </tbody>
   </table>
+
 <pagination :data="laravelData" @pagination-change-page="getResults"></pagination>
+    <!-- <MyModalAdd/> -->
+     <MyModalAdd @recordAdded="RefreshRecords"></MyModalAdd>
+    <!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+Please Add Record Click Here
+</button>
     </div>
 </template>
 
 <script>
 
-import LaravelVuePagination from './LaravelVuePagination.vue';
+import LaravelVuePagination from './PaginationMasterFiles/LaravelVuePagination.vue';
+import MyModalAdd from './PaginationMasterFiles/ModalAdded/MyModalAdd.vue'
 import axios from "axios";
 export default {
 data() {
@@ -46,10 +54,14 @@ data() {
 				.then(response => {
 					this.laravelData = response.data;
 				});
-		}
+        },
+        RefreshRecords(Record){
+            this.laravelData = Record.data
+      },
 	},
     components: {
-        'pagination': LaravelVuePagination
+          'pagination': LaravelVuePagination,
+          'MyModalAdd': MyModalAdd,
     },
 }
 </script>

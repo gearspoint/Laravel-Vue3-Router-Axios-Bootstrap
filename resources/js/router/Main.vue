@@ -2,7 +2,6 @@
 <div id="main">
   <HelloWorld msg="Welcome to Your.js App"/>
   <PaginationMain/>
-  <MyFirstComponent/>
   <My2ndComponent msg="My 2nd Compomnent"/>
 </div>
 </template>
@@ -10,13 +9,11 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import PaginationMain from './components/LaravelPaginationforVue3/PaginationMain.vue'
-import MyFirstComponent from './components/MyFirstComponent.vue'
 import My2ndComponent from './components/My2ndComponent.vue'
 export default {
   name: 'Main',
   components: {
     HelloWorld,
-    MyFirstComponent,
     My2ndComponent,
     PaginationMain
   }
