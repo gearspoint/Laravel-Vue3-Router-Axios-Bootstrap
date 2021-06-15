@@ -40126,8 +40126,16 @@ const _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)
 ], -1 /* HOISTED */)
 const _hoisted_6 = { class: "modal-body" }
 const _hoisted_7 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("label", { for: "nameYes" }, "Your Name, Email & Shark Level Here", -1 /* HOISTED */)
-const _hoisted_8 = { class: "modal-footer" }
-const _hoisted_9 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+const _hoisted_8 = {
+  key: 0,
+  class: "list-unstyle"
+}
+const _hoisted_9 = {
+  key: 1,
+  class: "list-unstyle"
+}
+const _hoisted_10 = { class: "modal-footer" }
+const _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
   type: "button",
   class: "btn btn-secondary",
   "data-bs-dismiss": "modal"
@@ -40166,10 +40174,30 @@ const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $optio
               "onUpdate:modelValue": _cache[3] || (_cache[3] = $event => ($data.shark_level = $event))
             }, null, 512 /* NEED_PATCH */), [
               [vue__WEBPACK_IMPORTED_MODULE_0__.vModelText, $data.shark_level]
-            ])
+            ]),
+            ($data.errors.name)
+              ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("ul", _hoisted_8, [
+                  ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.name, (error) => {
+                    return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("li", {
+                      key: error.name,
+                      class: "alert alert-danger"
+                    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(error), 1 /* TEXT */))
+                  }), 128 /* KEYED_FRAGMENT */))
+                ]))
+              : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true),
+            ($data.errors.email)
+              ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("ul", _hoisted_9, [
+                  ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(true), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)(vue__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.renderList)($data.errors.email, (error) => {
+                    return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("li", {
+                      key: error.email,
+                      class: "alert alert-danger"
+                    }, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(error), 1 /* TEXT */))
+                  }), 128 /* KEYED_FRAGMENT */))
+                ]))
+              : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)
           ]),
-          (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_8, [
-            _hoisted_9,
+          (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [
+            _hoisted_11,
             (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
               type: "button",
               class: "btn btn-primary",

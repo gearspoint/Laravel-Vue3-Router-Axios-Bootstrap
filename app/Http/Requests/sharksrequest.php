@@ -26,7 +26,7 @@ class sharksrequest extends FormRequest
     {
         return [
             'name' => 'required|min:5|max:255',
-            'email' => 'email'
+            'email' => 'required|email'
         ];
     }
 }
