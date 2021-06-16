@@ -14,7 +14,7 @@
 <textarea class="form-control" placeholder="Enter Email Here" id="email" v-model="email"></textarea>
 <textarea class="form-control" placeholder="Enter shark_level Here" id="shark_level" v-model="shark_level"></textarea>
 <ul v-if="errors.name" class="list-unstyle">
-<li v-for="error in errors.name" :key="error.name" class="alert alert-danger">{{ error }}</li>
+<li v-for="error in errors.name" :key="error.name" class="alert alert-danger" role="alert">{{ error }}</li>
 </ul>
 <ul v-if="errors.email" class="list-unstyle">
 <li v-for="error in errors.email" :key="error.email" class="alert alert-danger">{{ error }}</li>
