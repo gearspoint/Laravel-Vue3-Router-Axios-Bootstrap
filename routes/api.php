@@ -22,3 +22,9 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Route::resource("sharks", [sharkController::class]);
 Route::get("list",[sharkController::class,'list'] );
 Route::post("add",[sharkController::class,'add'] );
+
+
+Route::middleware('api')->group(function () {
+    Route::resource('products', ProductController::class);
+});
+

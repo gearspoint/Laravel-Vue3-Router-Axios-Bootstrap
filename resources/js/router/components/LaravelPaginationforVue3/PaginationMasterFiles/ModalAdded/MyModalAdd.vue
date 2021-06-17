@@ -20,6 +20,7 @@
 <li v-for="error in errors.email" :key="error.email" class="alert alert-danger">{{ error }}</li>
 </ul>
 </div>
+ <p v-if="Success">Record added Ok</p>
 <div class="modal-footer">
 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
 <button type="button" class="btn btn-primary" @click='addRecord' >Save changes</button>
@@ -52,7 +53,7 @@ methods: {
         })
         .then(data =>{
         this.$emit('recordAdded', data);
-        this.Success("Data has been added successfully");
+        this.Success = "Data has been added successfully";
         this.nameYes ='',
             this.email='',
             this.shark_level='';

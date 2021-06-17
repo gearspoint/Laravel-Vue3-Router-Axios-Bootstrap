@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSharksTable extends Migration
+class CreateProductsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,11 +13,10 @@ class CreateSharksTable extends Migration
      */
     public function up()
     {
-        Schema::create('sharks', function (Blueprint $table) {
+        Schema::create('products', function (Blueprint $table) {
             $table->id();
             $table->string('name');
-            $table->string('email');
-            $table->integer('shark_level');
+            $table->text('detail');
             $table->timestamps();
         });
     }
@@ -29,8 +28,6 @@ class CreateSharksTable extends Migration
      */
     public function down()
     {
-        Schema::table('sharks', function (Blueprint $table) {
-            //
-        });
+        Schema::dropIfExists('products');
     }
 }

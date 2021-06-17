@@ -33045,7 +33045,7 @@ __webpack_require__.r(__webpack_exports__);
     }
   },
   components: {
-    'pagination': _PaginationMasterFiles_LaravelVuePagination_vue__WEBPACK_IMPORTED_MODULE_0__.default,
+    'LaravelVuePagination': _PaginationMasterFiles_LaravelVuePagination_vue__WEBPACK_IMPORTED_MODULE_0__.default,
     'MyModalAdd': _PaginationMasterFiles_ModalAdded_MyModalAdd_vue__WEBPACK_IMPORTED_MODULE_1__.default
   }
 });
@@ -33143,8 +33143,7 @@ __webpack_require__.r(__webpack_exports__);
       }).then(function (data) {
         _this.$emit('recordAdded', data);
 
-        _this.Success("Data has been added successfully");
-
+        _this.Success = "Data has been added successfully";
         _this.nameYes = '', _this.email = '', _this.shark_level = '';
       })["catch"](function (error) {
         _this.errors = error.response.data.errors;
@@ -39932,10 +39931,24 @@ const _hoisted_3 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)
     /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", { scope: "col" }, "Id"),
     /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", { scope: "col" }, "Name"),
     /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", { scope: "col" }, "Email"),
-    /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", { scope: "col" }, "Craeted at")
+    /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <th scope=\"col\">Craeted at</th> "),
+    /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", { scope: "col" }, "Edit Record"),
+    /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("th", { scope: "col" }, "Delete Record")
   ])
 ], -1 /* HOISTED */)
-const _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+const _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [
+  /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+    type: "button",
+    class: "btn btn-info"
+  }, "Edit Record")
+], -1 /* HOISTED */)
+const _hoisted_5 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, [
+  /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+    type: "button",
+    class: "btn btn-danger"
+  }, "Delete Record")
+], -1 /* HOISTED */)
+const _hoisted_6 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
   type: "button",
   class: "btn btn-primary",
   "data-bs-toggle": "modal",
@@ -39943,7 +39956,7 @@ const _hoisted_4 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)
 }, " Please Add Record Click Here ", -1 /* HOISTED */)
 
 function render(_ctx, _cache, $props, $setup, $data, $options) {
-  const _component_pagination = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("pagination")
+  const _component_LaravelVuePagination = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("LaravelVuePagination")
   const _component_MyModalAdd = (0,vue__WEBPACK_IMPORTED_MODULE_0__.resolveComponent)("MyModalAdd")
 
   return ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("div", _hoisted_1, [
@@ -39957,19 +39970,21 @@ function render(_ctx, _cache, $props, $setup, $data, $options) {
             (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(d.id), 1 /* TEXT */),
             (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(d.name), 1 /* TEXT */),
             (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(d.email), 1 /* TEXT */),
-            (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("td", null, (0,vue__WEBPACK_IMPORTED_MODULE_0__.toDisplayString)(d.created_at), 1 /* TEXT */)
+            (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <td>{{ d.created_at }}</td> "),
+            _hoisted_4,
+            _hoisted_5
           ]))
         }), 128 /* KEYED_FRAGMENT */))
       ])
     ]),
-    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_pagination, {
+    (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_LaravelVuePagination, {
       data: $data.laravelData,
       onPaginationChangePage: $options.getResults
     }, null, 8 /* PROPS */, ["data", "onPaginationChangePage"]),
     (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" <MyModalAdd/> "),
     (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)(_component_MyModalAdd, { onRecordAdded: $options.RefreshRecords }, null, 8 /* PROPS */, ["onRecordAdded"]),
     (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)(" Button trigger modal "),
-    _hoisted_4
+    _hoisted_6
   ]))
 }
 
@@ -40134,8 +40149,9 @@ const _hoisted_9 = {
   key: 1,
   class: "list-unstyle"
 }
-const _hoisted_10 = { class: "modal-footer" }
-const _hoisted_11 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
+const _hoisted_10 = { key: 0 }
+const _hoisted_11 = { class: "modal-footer" }
+const _hoisted_12 = /*#__PURE__*/(0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
   type: "button",
   class: "btn btn-secondary",
   "data-bs-dismiss": "modal"
@@ -40197,8 +40213,11 @@ const render = /*#__PURE__*/_withId((_ctx, _cache, $props, $setup, $data, $optio
                 ]))
               : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true)
           ]),
-          (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_10, [
-            _hoisted_11,
+          ($data.Success)
+            ? ((0,vue__WEBPACK_IMPORTED_MODULE_0__.openBlock)(), (0,vue__WEBPACK_IMPORTED_MODULE_0__.createBlock)("p", _hoisted_10, "Record added Ok"))
+            : (0,vue__WEBPACK_IMPORTED_MODULE_0__.createCommentVNode)("v-if", true),
+          (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("div", _hoisted_11, [
+            _hoisted_12,
             (0,vue__WEBPACK_IMPORTED_MODULE_0__.createVNode)("button", {
               type: "button",
               class: "btn btn-primary",

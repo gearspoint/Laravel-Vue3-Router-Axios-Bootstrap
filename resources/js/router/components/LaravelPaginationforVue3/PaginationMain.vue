@@ -6,7 +6,9 @@
         <th scope="col">Id</th>
         <th scope="col">Name</th>
         <th scope="col">Email</th>
-        <th scope="col">Craeted at</th>
+        <!-- <th scope="col">Craeted at</th> -->
+        <th scope="col">Edit Record</th>
+        <th scope="col">Delete Record</th>
       </tr>
     </thead>
     <tbody>
@@ -14,13 +16,15 @@
         <td>{{ d.id }}</td>
         <td>{{ d.name }}</td>
         <td>{{ d.email }}</td>
-        <td>{{ d.created_at }}</td>
+        <!-- <td>{{ d.created_at }}</td> -->
+
+        <td><button type="button" class="btn btn-info">Edit Record</button></td>
+        <td><button type="button" class="btn btn-danger">Delete Record</button></td>
       </tr>
     </tbody>
   </table>
 
-<pagination :data="laravelData" @pagination-change-page="getResults"></pagination>
-    <!-- <MyModalAdd/> -->
+<LaravelVuePagination :data="laravelData" @pagination-change-page="getResults"></LaravelVuePagination>
      <MyModalAdd @recordAdded="RefreshRecords"></MyModalAdd>
     <!-- Button trigger modal -->
 <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
@@ -60,7 +64,7 @@ data() {
       },
 	},
     components: {
-          'pagination': LaravelVuePagination,
+          'LaravelVuePagination': LaravelVuePagination,
           'MyModalAdd': MyModalAdd,
     },
 }
