@@ -17,7 +17,7 @@
       </tr>
     </thead>
     <tbody>
-      <tr v-for="d in laravelData" v-bind:key="d.id">
+      <tr v-for="d in laravelData.data" v-bind:key="d.id">
         <td>{{ d.id }}</td>
         <td>{{ d.name }}</td>
         <td>{{ d.email }}</td>
@@ -70,7 +70,7 @@ data() {
 		getResults(page = 1) {
 			axios.get('http://127.0.0.1:8000/api/sharks?page=' + page)
 				.then(response => {
-					this.laravelData = response.data.data;
+					this.laravelData = response.data;
 				})
       .catch(error => {
           this.errors=error.response.data.errors;
@@ -78,7 +78,8 @@ data() {
         })
         },
         RefreshRecords(Record){
-            this.laravelData = Record.data
+            this.laravelData = Record.data.data;
+            this.getResults();
       },
                           DeleteRecord(id){
                           axios.delete('http://127.0.0.1:8000/api/sharks/'+id)

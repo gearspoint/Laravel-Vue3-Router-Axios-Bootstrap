@@ -27,7 +27,7 @@ class sharkController extends Controller
            // $shark['data'] shark::where("name","like","%".$name."%")->get(); 
            // return request()->json(200, $shark);
         }else{
-          return  shark::orderby('id','desc')->paginate(5);  
+          return  shark::orderby('id','desc')->paginate(7); 
         }
         
     }
@@ -86,7 +86,7 @@ class sharkController extends Controller
         $shark = $shark->save();
         // $shark = shark::create($request->all());
         If($shark){
-            return  shark::orderby('created_at', 'desc')->paginate(5);;
+            return  shark::orderby('created_at', 'desc')->paginate(7);
                     }
                     else {
                             return ["Data"=>"Data has not been saved"];
@@ -136,7 +136,7 @@ public function update($id, Request $request)
         $shark = shark::find($id);
         $shark = $shark->update($request->all());
 If($shark){
-            return  shark::orderby('created_at', 'desc')->paginate(5);;
+            return  shark::orderby('created_at', 'desc')->paginate(7);
                     }
                     else {
                             return ["Data"=>"Data has not been saved"];
@@ -160,7 +160,7 @@ If($shark){
         $shark = shark::find($id);
         $shark =$shark->delete();
         If($shark){
-            return  shark::orderby('id', 'desc')->paginate(5);;
+            return  shark::orderby('id', 'desc')->paginate(7);
                     }
                     else {
                             return ["Data"=>"Data has not been saved"];
