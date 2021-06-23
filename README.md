@@ -1,6 +1,6 @@
-# Laravel8-Vue3-Router4-Axios-Bootstrap5.0.0 By Gearspoint.com
+# Laravel8-Vue3-Router4-Axios-Bootstrap5.0.0 Along with pagination By Gearspoint.com
 
-It's a pre-configured project using Laravel 8, Vue 3, Vue-router@4,Axios and Bootstrap@5.0.0
+It's a pre-configured project using Laravel 8, Vue 3, Vue-router@4,Axios and Bootstrap@5.0.0 along with pagination ready project.
 
 to get it up and run just clone it and enhoy coding :
 
