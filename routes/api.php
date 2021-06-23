@@ -2,8 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\sharkController2;
 use App\Http\Controllers\sharkController;
-
+use App\Http\Controllers\ProductController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -20,11 +21,14 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 });
 
 // Route::resource("sharks", [sharkController::class]);
-Route::get("list",[sharkController::class,'list'] );
-Route::post("add",[sharkController::class,'add'] );
+Route::get("list",[sharkController2::class,'list'] );
+Route::post("add",[sharkController2::class,'add'] );
+Route::put("update",[sharkController2::class,'update'] );
+Route::put("update",[sharkController::class,'myupdate'] );
 
-
+Route::get("sharks/search/{name?}",[sharkController::class,'index'] );
 Route::middleware('api')->group(function () {
     Route::resource('products', ProductController::class);
+    Route::resource('sharks', sharkController::class);
 });
 

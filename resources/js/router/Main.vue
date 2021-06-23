@@ -10,6 +10,7 @@
 import HelloWorld from './components/HelloWorld.vue'
 import PaginationMain from './components/LaravelPaginationforVue3/PaginationMain.vue'
 import My2ndComponent from './components/My2ndComponent.vue'
+// import vue3crud from './vue-3-crud-master-Full-Folder/src/'
 export default {
   name: 'Main',
   components: {

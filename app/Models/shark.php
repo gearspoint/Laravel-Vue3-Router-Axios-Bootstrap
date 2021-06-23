@@ -9,4 +9,10 @@ class shark extends Model
 {
     use HasFactory;
     public $timestamp = true;
+    protected $fillable = [
+        'name',
+        'email',
+        'shark_level',
+        'published'
+    ];
 }

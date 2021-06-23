@@ -29,7 +29,7 @@ myObject: {
 }
 },methods: {
   myaxios () {
-      axios.get('http://127.0.0.1:8000/api/list')
+      axios.get('http://127.0.0.1:8000/api/sharks')
         .then((response) => this.myObject =  response.data)
       .catch((error) => console.log(error));
     }

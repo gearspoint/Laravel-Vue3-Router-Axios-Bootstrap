@@ -1,0 +1,37 @@
+ 	   POST      | api/sharks                  | sharks.store     | App\Http\Controllers\sharkController@store     | api
+      |
+
+
+|        | GET|HEAD  | api/sharks/create           | sharks.create    | App\Http\Controllers\sharkController@create    | api
+
+
+
+|        | GET|HEAD  | api/sharks/{shark}          | sharks.show      | App\Http\Controllers\sharkController@show      | api
+      |
+
+
+
+|        | PUT|PATCH | api/sharks/{shark}          | sharks.update    | App\Http\Controllers\sharkController@update    | api
+      |
+
+
+
+|        | DELETE    | api/sharks/{shark}          | sharks.destroy   | App\Http\Controllers\sharkController@destroy   | api
+      |
+
+
+
+|        | GET|HEAD  | api/sharks/{shark}/edit     | sharks.edit      | App\Http\Controllers\sharkController@edit      | api
+
+
+
+
+Put methos at http://127.0.0.1:8000/api/sharks/1
+
+The create method should return a view with a form.
+
+The store method should handle the form and create the entity and redirect.
+
+The edit method should return a view with a form with data from the entity.
+
+The update method should handle the form and update the entity and redirect.
