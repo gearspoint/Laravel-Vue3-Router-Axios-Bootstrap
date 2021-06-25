@@ -21037,7 +21037,7 @@ __webpack_require__.r(__webpack_exports__);
 
       if (this.search.length > 0) {
         axios__WEBPACK_IMPORTED_MODULE_4___default().get('http://127.0.0.1:8000/api/sharks/search/' + this.search).then(function (response) {
-          return _this4.laravelData = response.data;
+          return _this4.laravelData = response;
         })["catch"](function (error) {
           return console.log(error);
         });
@@ -27604,7 +27604,7 @@ __webpack_require__.r(__webpack_exports__);
 
 var ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_0___default()(function(i){return i[1]});
 // Module
-___CSS_LOADER_EXPORT___.push([module.id, "\nh3[data-v-4a74eb87] {\n  margin: 40px 0 0;\n}\nul[data-v-4a74eb87] {\n  list-style-type: none;\n  padding: 0;\n}\nli[data-v-4a74eb87] {\n  display: inline-block;\n  margin: 0 10px;\n}\na[data-v-4a74eb87] {\n  color: #42b983;\n}\n", ""]);
+___CSS_LOADER_EXPORT___.push([module.id, "\nh3[data-v-4a74eb87] {\n    margin: 40px 0 0;\n}\nul[data-v-4a74eb87] {\n    list-style-type: none;\n    padding: 0;\n}\nli[data-v-4a74eb87] {\n    display: inline-block;\n    margin: 0 10px;\n}\na[data-v-4a74eb87] {\n    color: #42b983;\n}\n\n", ""]);
 // Exports
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 

@@ -97,7 +97,7 @@ export default {
         SearchRecord() {
             if (this.search.length > 0) {
                 axios.get('http://127.0.0.1:8000/api/sharks/search/' + this.search)
-                    .then(response => this.laravelData = response.data)
+                    .then(response => this.laravelData = response)
                     .catch(error => console.log(error))
             } else {
                 this.getResults()
